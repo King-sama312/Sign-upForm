@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@font-face {
+    font-family: 'Norse';
+    src: url('assets/font/Norse-Bold.otf') format('otf'),
+    url('assets/font/Norse-Bold.woff2') format('woff2'),
+    url('assets/font/Norse-Bold.woff')format('woff');
+    
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-side {
+    flex: 0.5;
+    /* take half screen */
+    background-image: url('assets/images/green\ leafs.avif');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* needed for overlaying logo */
+}
+
+.right-side {
+    flex: 1;
+    /* other half */
+    padding: 2rem;
+    background-color: #f8f8f8;
+}
+
+.logo {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    /* put children in a row */
+    align-items: center;
+    /* vertically center logo + text */
+    justify-content: center;
+    /* horizontally center the whole group */
+    gap: 10px;
+    /* space between image and text */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 0;
+    color: white;
+}
+
+.logo img {
+    width: 60px;
+    /* tweak to match size in pic */
+}
+
+.logo h1 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin: 0;
+    /* remove default heading margin */
+    font-family: 'Norse', sans-serif;
+}
+
+.photo-credit {
+  position: absolute;
+  bottom: 10px;   /* 10px from bottom */
+  left: 6rem;     /* 10px from left */
+  font-size: 0.75rem;  /* small text */
+  color: rgba(255,255,255,0.8); /* soft white */
+}
+
+/* --- Right Side --- */
+.right-side {
+  flex: 1.5;
+  padding: 2rem;
+  background-color: #f8f8f8;
+}
+
+/* Intro text */
+.intro-text {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.intro-text p:last-child{
+    margin-top: 1rem;
+}
+
+/* Form container */
+.signup-form {
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+/* Row pairs (two inputs side by side) */
+.form-pair {
+  display: flex;
+  gap: 2rem;      /* spacing between inputs */
+  margin-bottom: 1rem;
+}
+
+/* Each label + input block */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Labels */
+.form-row label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+/* Inputs */
+input {
+  padding: 8px;
+  border: 1px solid #E5E7EB; /* light gray */
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Invalid input (e.g. wrong email or empty required field) */
+input:invalid {
+  border-color: red;
+}
+
+/* Focused input */
+input:focus {
+  border-color: #3b82f6; /* blue */
+  outline: none;
+  box-shadow: 0 0 3px rgba(59,130,246,0.5);
+}
+
+/* Submit button */
+.submit-btn {
+  margin-top: 1rem;
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #596D48; /* matches background tones */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #4a5d3b;
+}
+
+/* Already have an account text */
+.login-text {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.login-text a {
+  color: #596D48;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+
